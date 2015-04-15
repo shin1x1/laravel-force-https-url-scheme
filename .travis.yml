@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - 5.4
+  - 5.5
+  - 5.6
+
+before_script:
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+
+script:
+  - ./vendor/bin/phpunit
+
+notifications:
+  hipchat:
+    rooms:
+      secure: l3Eqsq6idQLE1Mh9PVBer9ZmoevskL4Qvr5tMuJi3Nqq+48CgwcOcZqp3tQZdULxeBen1aHAfoMARzQLCf7GkHFN62qVfEaSy9mJJkvXQ3S3/LfJdgm7saJ1gtpLyHQbAka9QPrZP6hd8gQEryCyegZyxbGRGBkMnaJhybNPIKw=
+
+
