@@ -41,7 +41,7 @@ class ForceSecureUrlSchemeTest extends PHPUnit_Framework_TestCase
      */
     public function handle_redirect($headers)
     {
-        $request = Mockery::mock(Request::class . '[getClientIp, getRequestUri]', [[], [], [], [], [], $headers]);
+        $request = Mockery::mock('Illuminate\Http\Request[getClientIp, getRequestUri]', [[], [], [], [], [], $headers]);
         $request->shouldReceive('getClientIp')->andReturn('127.0.0.1');
         $request->shouldReceive('getRequestUri')->andReturn('/path');
 
@@ -70,7 +70,7 @@ class ForceSecureUrlSchemeTest extends PHPUnit_Framework_TestCase
      */
     public function handle_no_redirect(array $headers)
     {
-        $request = Mockery::mock(Request::class . '[getClientIp, getRequestUri]', [[], [], [], [], [], $headers]);
+        $request = Mockery::mock('Illuminate\Http\Request[[getClientIp, getRequestUri]', [[], [], [], [], [], $headers]);
         $request->shouldReceive('getClientIp')->andReturn('127.0.0.1');
         $request->shouldReceive('getRequestUri')->andThrow(new Exception());
 
