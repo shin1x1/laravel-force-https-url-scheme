@@ -1,25 +1,25 @@
 <?php
-namespace Shin1x1\ForceSecureUrlScheme\Test;
+namespace Shin1x1\ForceHttpsUrlScheme\Test;
 
 use Exception;
 use Illuminate\Http\Request;
 use Mockery;
 use PHPUnit_Framework_TestCase;
-use Shin1x1\ForceSecureUrlScheme\ForceSecureUrlScheme;
-use Shin1x1\ForceSecureUrlScheme\Test\Utils\Application;
+use Shin1x1\ForceHttpsUrlScheme\ForceHttpsUrlScheme;
+use Shin1x1\ForceHttpsUrlScheme\Test\Utils\ForceHttpsUrlSchemeApplication as Application;
 
 /**
- * Class ForceSecureUrlSchemeTest
- * @package Shin1x1\ForceSecureUrlScheme\Test
+ * Class ForceHttpsUrlSchemeTest
+ * @package Shin1x1\ForceHttpsUrlScheme\Test
  */
-class ForceSecureUrlSchemeTest extends PHPUnit_Framework_TestCase
+class ForceHttpsUrlSchemeTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var Application
      */
     protected $app;
     /**
-     * @var ForceSecureUrlScheme
+     * @var ForceHttpsUrlScheme
      */
     protected $sut;
 
@@ -31,7 +31,7 @@ class ForceSecureUrlSchemeTest extends PHPUnit_Framework_TestCase
         parent::setUp();
 
         $this->app = new Application();
-        $this->sut = new ForceSecureUrlScheme($this->app);
+        $this->sut = new ForceHttpsUrlScheme($this->app);
         Helpers::$requestUri = '/path';
     }
 

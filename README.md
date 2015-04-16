@@ -1,13 +1,13 @@
-# laravel-force-secure-url-scheme
-Force secure url schema middleware for Laravel 5
+# laravel-force-https-url-scheme
+Force https url schema middleware for Laravel 5
 
-[![Build Status](https://travis-ci.org/shin1x1/laravel-force-secure-url-scheme.svg?branch=travis)](https://travis-ci.org/shin1x1/laravel-force-secure-url-scheme)
-[![Latest Stable Version](https://poser.pugx.org/shin1x1/laravel-force-secure-url-scheme/version.svg)](https://packagist.org/packages/shin1x1/laravel-force-secure-url-scheme)
+[![Build Status](https://travis-ci.org/shin1x1/laravel-force-https-url-scheme.svg?branch=travis)](https://travis-ci.org/shin1x1/laravel-force-https-url-scheme)
+[![Latest Stable Version](https://poser.pugx.org/shin1x1/laravel-force-https-url-scheme/version.svg)](https://packagist.org/packages/shin1x1/laravel-force-https-url-scheme)
 
 ## Install
 
 ```
-$ composer require shin1x1/laravel-force-secure-url-scheme
+$ composer require shin1x1/laravel-force-https-url-scheme
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
-        'Shin1x1\ForceSecureUrlScheme\ForceSecureUrlScheme', // <---added
+        'Shin1x1\ForceHttpsUrlScheme\ForceHttpsUrlScheme', // <---added
         'Illuminate\Cookie\Middleware\EncryptCookies',
         'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
         'Illuminate\Session\Middleware\StartSession',
@@ -64,7 +64,7 @@ class Kernel extends HttpKernel
         'auth' => 'App\Http\Middleware\Authenticate',
         'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
         'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
-        'force_secure_url_scheme' => 'Shin1x1\ForceSecureUrlScheme\ForceSecureUrlScheme', // <---added 
+        'force_https_url_scheme' => 'Shin1x1\ForceHttpsUrlScheme\ForceHttpsUrlScheme', // <---added 
     ];
 }
 ```
@@ -72,7 +72,7 @@ class Kernel extends HttpKernel
 * app/Http/routes.php
 
 ```
-Route::group(['middleware' => 'force_secure_url_scheme'], function () {
+Route::group(['middleware' => 'force_https_url_scheme'], function () {
     get('/admin/', function () {
         // something here
     });

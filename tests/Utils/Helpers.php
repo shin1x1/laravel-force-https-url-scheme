@@ -1,8 +1,8 @@
 <?php
-namespace Shin1x1\ForceSecureUrlScheme\Test {
+namespace Shin1x1\ForceHttpsUrlScheme\Test {
     /**
      * Class Helpers
-     * @package Shin1x1\ForceSecureUrlSchemeTest
+     * @package Shin1x1\ForceHttpsUrlScheme\Test
      */
     class Helpers
     {
@@ -13,8 +13,8 @@ namespace Shin1x1\ForceSecureUrlScheme\Test {
     }
 }
 
-namespace Shin1x1\ForceSecureUrlScheme {
-    use Shin1x1\ForceSecureUrlScheme\Test\Helpers;
+namespace Shin1x1\ForceHttpsUrlScheme {
+    use Shin1x1\ForceHttpsUrlScheme\Test\Helpers;
 
     /**
      * @return \Mockery\MockInterface

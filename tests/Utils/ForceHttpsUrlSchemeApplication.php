@@ -1,9 +1,13 @@
 <?php
-namespace Shin1x1\ForceSecureUrlScheme\Test\Utils;
+namespace Shin1x1\ForceHttpsUrlScheme\Test\Utils;
 
 use Closure;
 
-class Application implements \Illuminate\Contracts\Foundation\Application
+/**
+ * Class ForceHttpsUrlSchemeApplication
+ * @package Shin1x1\ForceHttpsUrlScheme\Test\Utils
+ */
+class ForceHttpsUrlSchemeApplication implements \Illuminate\Contracts\Foundation\Application
 {
     public $environment = 'production';
 

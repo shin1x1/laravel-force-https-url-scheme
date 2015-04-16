@@ -1,5 +1,5 @@
 <?php
-namespace Shin1x1\ForceSecureUrlScheme;
+namespace Shin1x1\ForceHttpsUrlScheme;
 
 use Closure;
 use Illuminate\Contracts\Foundation\Application;
@@ -7,10 +7,10 @@ use Illuminate\Contracts\Routing\Middleware;
 use Illuminate\Http\Request;
 
 /**
- * Class ForceSecureUrlScheme
- * @package Shin1x1\ForceSecureUrlScheme
+ * Class ForceHttpsUrlScheme
+ * @package Shin1x1\ForceHttpsUrlScheme
  */
-class ForceSecureUrlScheme implements Middleware
+class ForceHttpsUrlScheme implements Middleware
 {
     /**
      * @var Application

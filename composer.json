@@ -1,8 +1,8 @@
 {
-  "name": "shin1x1/laravel-force-secure-url-scheme",
-  "description": "Force secure url schema middleware for Laravel 5",
+  "name": "shin1x1/laravel-force-https-url-scheme",
+  "description": "Force https url schema middleware for Laravel 5",
   "keywords": ["Laravel", "middleware"],
-  "homepage": "https://github.com/shin1x1/laravel-force-secure-url-scheme",
+  "homepage": "https://github.com/shin1x1/laravel-force-https-url-scheme",
   "license": "MIT",
   "authors": [
     {
@@ -22,8 +22,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Shin1x1\\ForceSecureUrlScheme\\": "src",
-      "Shin1x1\\ForceSecureUrlScheme\\Test\\": "tests"
+      "Shin1x1\\ForceHttpsUrlScheme\\": "src",
+      "Shin1x1\\ForceHttpsUrlScheme\\Test\\": "tests"
     }
   },
   "minimum-stability": "stable"
