@@ -3,14 +3,13 @@ namespace Shin1x1\ForceHttpsUrlScheme;
 
 use Closure;
 use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\Routing\Middleware;
 use Illuminate\Http\Request;
 
 /**
  * Class ForceHttpsUrlScheme
  * @package Shin1x1\ForceHttpsUrlScheme
  */
-class ForceHttpsUrlScheme implements Middleware
+class ForceHttpsUrlScheme
 {
     /**
      * @var Application
