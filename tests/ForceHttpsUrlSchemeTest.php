@@ -2,11 +2,10 @@
 namespace Shin1x1\ForceHttpsUrlScheme\Test;
 
 use Exception;
-use Illuminate\Http\Request;
+use Illuminate\Contracts\Foundation\Application;
 use Mockery;
 use PHPUnit_Framework_TestCase;
 use Shin1x1\ForceHttpsUrlScheme\ForceHttpsUrlScheme;
-use Shin1x1\ForceHttpsUrlScheme\Test\Utils\ForceHttpsUrlSchemeApplication as Application;
 
 /**
  * Class ForceHttpsUrlSchemeTest
@@ -30,7 +29,9 @@ class ForceHttpsUrlSchemeTest extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->app = new Application();
+        $this->app = Mockery::mock(Application::class);
+        $this->app->shouldReceive('environment')->andReturn('production');
+
         $this->sut = new ForceHttpsUrlScheme($this->app);
         Helpers::$requestUri = '/path';
     }
