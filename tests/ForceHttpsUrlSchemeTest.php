@@ -29,7 +29,7 @@ class ForceHttpsUrlSchemeTest extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->app = Mockery::mock(Application::class);
+        $this->app = Mockery::mock('Illuminate\Contracts\Foundation\Application');
         $this->app->shouldReceive('environment')->andReturn('production');
 
         $this->sut = new ForceHttpsUrlScheme($this->app);
