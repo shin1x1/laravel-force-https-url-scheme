@@ -237,7 +237,7 @@ class ForceHttpsUrlSchemeApplication implements \Illuminate\Contracts\Foundation
      * @param  array $parameters
      * @return mixed
      */
-    public function make($abstract, $parameters = array())
+    public function make($abstract, array $parameters = array())
     {
         // TODO: Implement make() method.
     }
@@ -288,5 +288,35 @@ class ForceHttpsUrlSchemeApplication implements \Illuminate\Contracts\Foundation
     public function afterResolving($abstract, Closure $callback = null)
     {
         // TODO: Implement afterResolving() method.
+    }
+
+    /**
+     * Get the base path of the Laravel installation.
+     *
+     * @return string
+     */
+    public function basePath()
+    {
+        // TODO: Implement basePath() method.
+    }
+
+    /**
+     * Get the path to the cached "compiled.php" file.
+     *
+     * @return string
+     */
+    public function getCachedCompilePath()
+    {
+        // TODO: Implement getCachedCompilePath() method.
+    }
+
+    /**
+     * Get the path to the cached services.php file.
+     *
+     * @return string
+     */
+    public function getCachedServicesPath()
+    {
+        // TODO: Implement getCachedServicesPath() method.
     }
 }
