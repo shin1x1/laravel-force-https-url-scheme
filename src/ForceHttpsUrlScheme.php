@@ -35,7 +35,7 @@ class ForceHttpsUrlScheme
     {
         if ($this->app->environment() === 'production') {
             // for Proxies
-            Request::setTrustedProxies([$request->getClientIp()]);
+            Request::setTrustedProxies([$request->getClientIp()], Request::HEADER_X_FORWARDED_ALL);
             if (!$request->isSecure()) {
                 return redirect()->secure($request->getRequestUri());
             }
